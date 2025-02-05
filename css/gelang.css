@@ -11,32 +11,43 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Navbar */
+header {
+    display: inline;
+    padding-top: 10px; /* Mengurangi padding agar header tidak terlalu tinggi */
+}
+
 .navbar-container {
     width: 100%;
-    padding-block: 15px;
+    padding: 10px 20px; /* Mengurangi tinggi navbar */
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    top: 0;
+    left: 0;
     background-color: #B99982;
     z-index: 9999;
-    flex-wrap: wrap; /* Membuat navbar tetap rapi saat layar kecil */
-    padding: 10px 20px;
 }
 
 .navbar-container .logo img {
-    width: 120px; /* Ukuran logo lebih fleksibel */
+    width: 120px; /* Mengecilkan logo agar lebih proporsional */
+    margin-left: 20px;
 }
 
 .navbar-container .nav-list ul {
+    padding-left: 0;
     display: flex;
     justify-content: center;
-    list-style: none;
+    margin-right: 20px;
+}
+
+.navbar-container .nav-list li {
+    list-style-type: none;
 }
 
 .navbar-container .nav-list li a {
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
@@ -51,18 +62,15 @@ body {
 
 /* Main */
 main {
-    padding: 100px 20px 20px;
-    text-align: center;
+    padding: 80px 20px 20px; /* Menambahkan padding atas agar tidak ketutupan navbar */
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Grid lebih fleksibel */
+    gap: 15px;
 }
 
-/* Produk Item */
 .product-item {
     background-color: #fff;
     border-radius: 10px;
@@ -88,9 +96,10 @@ main {
 .product-item button {
     background-color: #d8cfc4;
     border: none;
-    padding: 10px 15px;
+    padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 0.9rem;
 }
 
 .product-item button:hover {
@@ -100,48 +109,6 @@ main {
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     background-color: #d8cfc4;
-}
-
-/* RESPONSIVE DESIGN */
-
-/* Tablet */
-@media (max-width: 1024px) {
-    .product-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .navbar-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .navbar-container .nav-list ul {
-        flex-direction: column;
-        padding-top: 10px;
-    }
-    .navbar-container .nav-list li {
-        margin: 5px 0;
-    }
-}
-
-/* Smartphone */
-@media (max-width: 768px) {
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .navbar-container .logo img {
-        width: 100px; /* Mengecilkan logo agar lebih sesuai */
-    }
-    .navbar-container .nav-list ul {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-/* Ukuran Kecil */
-@media (max-width: 480px) {
-    .product-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
 }

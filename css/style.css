@@ -2,56 +2,55 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: 'Quicksand', sans-serif;
-    height: 100vh;
-    margin: 0;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-header {
-    display: inline;
-}
-
+/* Navbar */
 .navbar-container {
     width: 100%;
     padding: 10px 20px;
-    margin-inline: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    top: 0;
+    left: 0;
     background-color: #B99982;
-    z-index: 9999;
+    z-index: 1000;
     flex-wrap: wrap;
 }
 
 .navbar-container .logo img {
-    width: 120px;
+    width: 80px;
 }
 
 .navbar-container .nav-list ul {
-    padding-left: 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
 }
 
 .navbar-container .nav-list li {
-    list-style-type: none;
+    margin: 5px;
 }
 
 .navbar-container .nav-list li a {
-    padding: 0.5rem 1rem;
-    border-radius: 999px;
+    padding: 6px 12px;
+    border-radius: 20px;
     text-decoration: none;
-    font-size: 1.05rem;
-    font-weight: 500;
+    font-size: 14px;
     color: black;
-    transition: all 0.2s ease-in-out;
+    transition: 0.2s;
 }
 
 .navbar-container .nav-list li:hover a {
@@ -59,26 +58,26 @@ header {
     color: white;
 }
 
+/* Main Content */
 main {
     width: 100%;
     flex-grow: 1;
-    margin: 0 auto;
     text-align: center;
+    margin-top: 80px; /* Sesuaikan agar konten tidak tertutup navbar */
+    padding: 20px;
 }
 
 main .gambar {
     max-width: 100%;
-    width: 90%;
+    width: 85%;
     height: auto;
-    border-radius: 25px;
-    display: block;
-    margin: 100px auto 0;
+    border-radius: 15px;
+    margin: 30px auto;
 }
 
 main #catalog {
     font-size: 20px;
-    margin-top: 50px;
-    width: 100%;
+    margin-top: 20px;
 }
 
 main article {
@@ -86,75 +85,65 @@ main article {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 main article img {
     width: 80%;
     max-width: 300px;
     height: auto;
-    border-radius: 25px;
-    margin: 20px;
+    border-radius: 15px;
+    margin: 10px;
 }
 
 main .content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 15px;
 }
 
 main .content .img {
-    width: 80%;
-    max-width: 400px;
-    border-radius: 20px;
-    margin-bottom: 20px;
+    width: 75%;
+    max-width: 320px;
+    border-radius: 12px;
+    margin-bottom: 10px;
 }
 
 main .content .isi {
-    padding: 20px;
-    font-size: 20px;
+    padding: 10px;
+    font-size: 16px;
 }
 
-main .sub-content2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 30px;
-}
-
-main .sub-content2 img {
-    width: 80%;
-    max-width: 300px;
-    border-radius: 20px;
-    margin: 15px;
-}
-
+/* Footer */
 footer {
     background-color: #d9b6a3;
-    padding: 20px 40px;
+    padding: 20px;
     color: #000;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
 }
 
-footer .footer1, footer .footer2, footer .footer3 {
+footer .footer1,
+footer .footer2,
+footer .footer3 {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 footer img {
-    width: auto;
-    height: 30px;
-    margin-right: 10px;
+    height: 25px;
+    margin-right: 5px;
 }
 
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
     .navbar-container {
         flex-direction: column;
         align-items: center;
+        padding: 8px;
     }
 
     .navbar-container .nav-list ul {
@@ -162,15 +151,29 @@ footer img {
         align-items: center;
     }
 
+    main {
+        margin-top: 90px;
+    }
+
+    main .gambar {
+        width: 90%;
+        margin-top: 20px;
+    }
+
     main article {
-        flex-direction: column;
+        margin-top: 10px;
     }
 
     main .content {
-        flex-direction: column;
+        padding: 10px;
+    }
+
+    main .content .img {
+        width: 90%;
     }
 
     footer {
         flex-direction: column;
+        padding: 15px;
     }
 }

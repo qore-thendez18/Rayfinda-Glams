@@ -13,27 +13,24 @@ body {
 
 header {
     display: inline;
-    padding-top: 20px;
+    padding-top: 10px; /* Mengurangi padding agar header tidak terlalu tinggi */
 }
 
 .navbar-container {
     width: 100%;
-    padding-block: 15px;
-    margin-inline: auto;
-    margin-bottom: 30px;
+    padding: 10px 20px; /* Mengurangi tinggi navbar */
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    background-color: #B99982;
-    z-index: 9999;
     top: 0;
     left: 0;
-    right: 0;
+    background-color: #B99982;
+    z-index: 9999;
 }
 
 .navbar-container .logo img {
-    width: 120px;
+    width: 120px; /* Mengecilkan logo agar lebih proporsional */
     margin-left: 20px;
 }
 
@@ -49,7 +46,7 @@ header {
 }
 
 .navbar-container .nav-list li a {
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.8rem;
     border-radius: 999px;
     text-decoration: none;
     font-size: 1rem;
@@ -65,13 +62,13 @@ header {
 
 /* Main */
 main {
-    padding: 100px 20px 20px; /* Adjust padding to account for fixed navbar */
+    padding: 80px 20px 20px; /* Menambahkan padding atas agar tidak ketutupan navbar */
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Grid lebih fleksibel */
+    gap: 15px;
 }
 
 .product-item {
@@ -99,9 +96,10 @@ main {
 .product-item button {
     background-color: #d8cfc4;
     border: none;
-    padding: 10px 15px;
+    padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 0.9rem;
 }
 
 .product-item button:hover {
@@ -111,33 +109,6 @@ main {
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     background-color: #d8cfc4;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .navbar-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar-container .nav-list ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .navbar-container .nav-list li {
-        margin-bottom: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar-container .logo img {
-        width: 100px;
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
 }

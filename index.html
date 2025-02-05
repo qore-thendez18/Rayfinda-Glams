@@ -117,15 +117,18 @@ function checkLogin() {
     }
 }
 
+
       </script>
     <body>
         <header class="navbar-container">
             <div class="logo">
-                <img src="img/rayfinda_logo.png" alt="Dicoding Indonesia"/>
+                <img src="img/rayfinda_logo.png" alt="Rayfinda Glems"/>
                 <img id="user-profile" src="" alt="User Profile" style="display:none; width: 40px; height: 40px; border-radius: 50%;">
             </div>
-        
-            <nav class="nav-list">
+            
+            <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+            
+            <nav class="nav-list" id="navList">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#catalog">Catalog</a></li>
@@ -216,4 +219,5 @@ function checkLogin() {
             </div>
        </footer>
     </body>
+    <script src="script.js"></script>
 </html>
