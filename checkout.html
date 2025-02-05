@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Checkout</title>
+      <!-- CSS -->
+      <link rel="stylesheet" href="css/checkout.css">
+      <!-- Google Font -->
+      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+      <!-- Font Awesome -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-dyphcsq1RgVHZSm3p6zv4TtqT1xTfuBJIHu5E97P5iFiCcNpNUK7Tx7yz/SzM6E0IQYy8kx1RY3zsR5gC02+/g=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+  </head>
+
+  <body>
+    <div class="checkout-container">
+      <header class="header">
+        <img src="img/rayfinda_logo.png">
+        <button class="cancel-btn">
+          <i class="fas fa-times"></i> Cancel My Booking
+        </button>
+      </header>
+
+      <main class="main-content">
+        <section class="book-info">
+          <h2>Book Information</h2>
+          <div class="info-grid">
+            <div>
+              <label>Full Name</label>
+              <p>Siapa Aja</p>
+            </div>
+            <div>
+              <label>Recipient Name</label>
+              <p>Sapa Tuc</p>
+            </div>
+            <div>
+              <label>Email Address</label>
+              <p>siapa@gmail.com</p>
+            </div>
+            <div>
+              <label>Phone Number</label>
+              <p>Full Name</p>
+            </div>
+            <div class="full-width">
+              <label>Address</label>
+              <p>Jl.manan r00/rw11 kel.khikhik kec.heuheu, kota mana jodh, Indonesia...</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="price-details">
+          <h2>Price Details</h2>
+          <form>
+            <label>Cart Number</label>
+            <input type="text" placeholder="1234-5678-910">
+
+            <label>Voucher Diskon</label>
+            <input type="text" placeholder="Masukkan kode voucher">
+
+            <label>Metode Pembayaran</label>
+            <select>
+              <option value="cod">COD</option>
+              <option value="transfer">Transfer</option>
+            </select>
+          </form>
+        </section>
+
+        <section class="shipping-method">
+          <h2>Shipping Method</h2>
+          <div class="shipping-options">
+            <label class="option">
+              <input type="radio" name="shipping" checked>
+              <span>Regular Shipping</span>
+              <p>7–14 Business day <span>Rp. 5,000</span></p>
+            </label>
+            <label class="option">
+              <input type="radio" name="shipping">
+              <span>Express Shipping</span>
+              <p>1–3 Business day <span>Rp. 15,000</span></p>
+            </label>
+          </div>
+        </section>
+
+        <aside class="your-product">
+          <h2>Your Product</h2>
+          <div class="product">
+            <img src="img/kalung/10.png" alt="Product">
+            <p>Pearl Starfish<br>Rp. 2,000 x 5</p>
+          </div>
+          <h2>Summary</h2>
+          <div class="summary">
+            <p>Subtotal Produk <span>Rp. 100,000</span></p>
+            <p>Subtotal Pengiriman <span>Rp. 5,000</span></p>
+            <p>Biaya Layanan <span>Rp. 5,000</span></p>
+            <hr>
+            <p>Total <span>Rp. 125,000</span></p>
+          </div>
+          <button class="checkout-btn">Continue to Checkout</button>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>

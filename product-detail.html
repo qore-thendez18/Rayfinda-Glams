@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Produk - Rayfinda Glems</title>
+    <link rel="stylesheet" href="css/detail-product.css">
+</head>
+<body>
+    <header class="navbar-container">
+        <div class="logo">
+            <img src="img/rayfinda_logo.png" alt="Rayfinda Glems"/>
+        </div>
+        <nav class="nav-list">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="necklace.html">Kalung</a></li>
+                <li><a href="ring.html">Cincin</a></li>
+                <li><a href="bracelet.html">Gelang</a></li>
+                <li><a href="strap.html">Strap</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="product-detail">
+            <!-- Detail produk akan dimuat di sini -->
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact Us: rayfindaglem@gmail.com</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const category = urlParams.get('category');
+            const product = urlParams.get('product');
+
+            const products = {
+                gelang: {
+                    jasminoid: {
+                        name: "Jasminoid",
+                        image: "img/gelang/IMG-20241214-WA0026.jpg",
+                        description: "Deskripsi produk Jasminoid",
+                        price: "RP. 2.000"
+                    },
+                    sunflower: {
+                        name: "Sunflower",
+                        image: "img/gelang/IMG-20241214-WA0027.jpg",
+                        description: "Deskripsi produk Sunflower",
+                        price: "RP. 2.000"
+                    },
+                    cherry: {
+                        name: "Cherry",
+                        image: "img/gelang/IMG-20241214-WA0028.jpg",
+                        description: "Deskripsi produk Cherry",
+                        price: "RP. 2.000"
+                    },
+                    colorful_hearts: {
+                        name: "Colorful Hearts",
+                        image: "img/gelang/IMG-20241214-WA0029.jpg",
+                        description: "Deskripsi produk Colorful Hearts",
+                        price: "RP. 2.000"
+                    },
+                    flower_pearl: {
+                        name: "Flower Pearl",
+                        image: "img/gelang/IMG-20241214-WA0030.jpg",
+                        description: "Deskripsi produk Flower Pearl",
+                        price: "RP. 2.000"
+                    },
+                    purple_smile: {
+                        name: "Purple Smile",
+                        image: "img/gelang/IMG-20241214-WA0031.jpg",
+                        description: "Deskripsi produk Purple Smile",
+                        price: "RP. 2.000"
+                    },
+                    sea_shells: {
+                        name: "Sea Shells",
+                        image: "img/gelang/IMG-20241214-WA0032.jpg",
+                        description: "Deskripsi produk Sea Shells",
+                        price: "RP. 2.000"
+                    },
+                    glossy_butterfly: {
+                        name: "Glossy Butterfly",
+                        image: "img/gelang/IMG-20241214-WA0033.jpg",
+                        description: "Deskripsi produk Glossy Butterfly",
+                        price: "RP. 2.000"
+                    },
+                    custom_name: {
+                        name: "Custom Name",
+                        image: "img/gelang/IMG-20241214-WA0034.jpg",
+                        description: "Deskripsi produk Custom Name",
+                        price: "RP. 2.000"
+                    },
+                    tulips: {
+                        name: "Tulips",
+                        image: "img/gelang/IMG-20241214-WA0035.jpg",
+                        description: "Deskripsi produk Tulips",
+                        price: "RP. 2.000"
+                    }
+                },
+                kalung: {
+                    pearl_starfish: {
+                        name: "Pearl Starfish",
+                        image: "img/kalung/IMG-20241214-WA0036.jpg",
+                        description: "Deskripsi produk Pearl Starfish",
+                        price: "RP. 2.000"
+                    },
+                    moonstone: {
+                        name: "Moonstone",
+                        image: "img/kalung/IMG-20241214-WA0037.jpg",
+                        description: "Deskripsi produk Moonstone",
+                        price: "RP. 2.000"
+                    },
+                    heart_necklace: {
+                        name: "Heart Necklace",
+                        image: "img/kalung/IMG-20241214-WA0038.jpg",
+                        description: "Deskripsi produk Heart Necklace",
+                        price: "RP. 2.000"
+                    },
+                    star_necklace: {
+                        name: "Star Necklace",
+                        image: "img/kalung/IMG-20241214-WA0039.jpg",
+                        description: "Deskripsi produk Star Necklace",
+                        price: "RP. 2.000"
+                    },
+                    flower_necklace: {
+                        name: "Flower Necklace",
+                        image: "img/kalung/IMG-20241214-WA0040.jpg",
+                        description: "Deskripsi produk Flower Necklace",
+                        price: "RP. 2.000"
+                    },
+                    shell_necklace: {
+                        name: "Shell Necklace",
+                        image: "img/kalung/IMG-20241214-WA0041.jpg",
+                        description: "Deskripsi produk Shell Necklace",
+                        price: "RP. 2.000"
+                    },
+                    crystal_necklace: {
+                        name: "Crystal Necklace",
+                        image: "img/kalung/IMG-20241214-WA0042.jpg",
+                        description: "Deskripsi produk Crystal Necklace",
+                        price: "RP. 2.000"
+                    },
+                    beaded_necklace: {
+                        name: "Beaded Necklace",
+                        image: "img/kalung/IMG-20241214-WA0043.jpg",
+                        description: "Deskripsi produk Beaded Necklace",
+                        price: "RP. 2.000"
+                    },
+                    choker: {
+                        name: "Choker",
+                        image: "img/kalung/IMG-20241214-WA0044.jpg",
+                        description: "Deskripsi produk Choker",
+                        price: "RP. 2.000"
+                    },
+                    layered_necklace: {
+                        name: "Layered Necklace",
+                        image: "img/kalung/IMG-20241214-WA0045.jpg",
+                        description: "Deskripsi produk Layered Necklace",
+                        price: "RP. 2.000"
+                    }
+                },
+                cincin: {
+                    gold_ring: {
+                        name: "Gold Ring",
+                        image: "img/cincin/IMG-20241214-WA0046.jpg",
+                        description: "Deskripsi produk Gold Ring",
+                        price: "RP. 2.000"
+                    },
+                    silver_ring: {
+                        name: "Silver Ring",
+                        image: "img/cincin/IMG-20241214-WA0047.jpg",
+                        description: "Deskripsi produk Silver Ring",
+                        price: "RP. 2.000"
+                    },
+                    diamond_ring: {
+                        name: "Diamond Ring",
+                        image: "img/cincin/IMG-20241214-WA0048.jpg",
+                        description: "Deskripsi produk Diamond Ring",
+                        price: "RP. 2.000"
+                    },
+                    gemstone_ring: {
+                        name: "Gemstone Ring",
+                        image: "img/cincin/IMG-20241214-WA0049.jpg",
+                        description: "Deskripsi produk Gemstone Ring",
+                        price: "RP. 2.000"
+                    },
+                    wedding_ring: {
+                        name: "Wedding Ring",
+                        image: "img/cincin/IMG-20241214-WA0050.jpg",
+                        description: "Deskripsi produk Wedding Ring",
+                        price: "RP. 2.000"
+                    },
+                    promise_ring: {
+                        name: "Promise Ring",
+                        image: "img/cincin/IMG-20241214-WA0051.jpg",
+                        description: "Deskripsi produk Promise Ring",
+                        price: "RP. 2.000"
+                    },
+                    vintage_ring: {
+                        name: "Vintage Ring",
+                        image: "img/cincin/IMG-20241214-WA0052.jpg",
+                        description: "Deskripsi produk Vintage Ring",
+                        price: "RP. 2.000"
+                    },
+                    stackable_ring: {
+                        name: "Stackable Ring",
+                        image: "img/cincin/IMG-20241214-WA0053.jpg",
+                        description: "Deskripsi produk Stackable Ring",
+                        price: "RP. 2.000"
+                    },
+                    adjustable_ring: {
+                        name: "Adjustable Ring",
+                        image: "img/cincin/IMG-20241214-WA0054.jpg",
+                        description: "Deskripsi produk Adjustable Ring",
+                        price: "RP. 2.000"
+                    },
+                    cocktail_ring: {
+                        name: "Cocktail Ring",
+                        image: "img/cincin/IMG-20241214-WA0055.jpg",
+                        description: "Deskripsi produk Cocktail Ring",
+                        price: "RP. 2.000"
+                    }
+                },
+                strap: {
+                    leather_strap: {
+                        name: "Leather Strap",
+                        image: "img/strap/IMG-20241214-WA0056.jpg",
+                        description: "Deskripsi produk Leather Strap",
+                        price: "RP. 2.000"
+                    },
+                    nylon_strap: {
+                        name: "Nylon Strap",
+                        image: "img/strap/IMG-20241214-WA0057.jpg",
+                        description: "Deskripsi produk Nylon Strap",
+                        price: "RP. 2.000"
+                    },
+                    metal_strap: {
+                        name: "Metal Strap",
+                        image: "img/strap/IMG-20241214-WA0058.jpg",
+                        description: "Deskripsi produk Metal Strap",
+                        price: "RP. 2.000"
+                    },
+                    rubber_strap: {
+                        name: "Rubber Strap",
+                        image: "img/strap/IMG-20241214-WA0059.jpg",
+                        description: "Deskripsi produk Rubber Strap",
+                        price: "RP. 2.000"
+                    },
+                    canvas_strap: {
+                        name: "Canvas Strap",
+                        image: "img/strap/IMG-20241214-WA0060.jpg",
+                        description: "Deskripsi produk Canvas Strap",
+                        price: "RP. 2.000"
+                    },
+                    silicone_strap: {
+                        name: "Silicone Strap",
+                        image: "img/strap/IMG-20241214-WA0061.jpg",
+                        description: "Deskripsi produk Silicone Strap",
+                        price: "RP. 2.000"
+                    },
+                    beaded_strap: {
+                        name: "Beaded Strap",
+                        image: "img/strap/IMG-20241214-WA0062.jpg",
+                        description: "Deskripsi produk Beaded Strap",
+                        price: "RP. 2.000"
+                    },
+                    braided_strap: {
+                        name: "Braided Strap",
+                        image: "img/strap/IMG-20241214-WA0063.jpg",
+                        description: "Deskripsi produk Braided Strap",
+                        price: "RP. 2.000"
+                    },
+                    adjustable_strap: {
+                        name: "Adjustable Strap",
+                        image: "img/strap/IMG-20241214-WA0064.jpg",
+                        description: "Deskripsi produk Adjustable Strap",
+                        price: "RP. 2.000"
+                    },
+                    decorative_strap: {
+                        name: "Decorative Strap",
+                        image: "img/strap/IMG-20241214-WA0065.jpg",
+                        description: "Deskripsi produk Decorative Strap",
+                        price: "RP. 2.000"
+                    }
+                }
+            };
+
+            const productDetailDiv = document.getElementById('product-detail');
+            if (products[category] && products[category][product]) {
+                const productDetails = products[category][product];
+                productDetailDiv.innerHTML = `
+                    <img src="${productDetails.image}" alt="${productDetails.name}">
+                    <h1>${productDetails.name}</h1>
+                    <p>${productDetails.description}</p>
+                    <p>${productDetails.price}</p>
+                    <button onclick="addToCart('${productDetails.name}')">Add to cart</button>
+                `;
+            } else {
+                productDetailDiv.innerHTML = "<p>Produk tidak ditemukan</p>";
+            }
+        });
+
+        function addToCart(productName) {
+            alert(productName + " telah ditambahkan ke keranjang!");
+        }
+    </script>
+</body>
+</html>

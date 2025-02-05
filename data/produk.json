@@ -1,0 +1,290 @@
+{
+    "kalung": [
+        {
+            "name": "Kalung 1",
+            "image": "img/kalung/1.png",
+            "originalPrice": "15000",
+            "discountedPrice": "5000",
+            "itemNumber": "12345678"
+        },
+        {
+            "name": "Kalung 2",
+            "image": "img/kalung/2.png",
+            "originalPrice": "18000",
+            "discountedPrice": "6000",
+            "itemNumber": "12345679"
+        },
+        {
+            "name": "Kalung 3",
+            "image": "img/kalung/3.png",
+            "originalPrice": "20000",
+            "discountedPrice": "7000",
+            "itemNumber": "12345680"
+        },
+        {
+            "name": "Kalung 4",
+            "image": "img/kalung/4.png",
+            "originalPrice": "22000",
+            "discountedPrice": "8000",
+            "itemNumber": "12345681"
+        },
+        {
+            "name": "Kalung 5",
+            "image": "img/kalung/5.png",
+            "originalPrice": "25000",
+            "discountedPrice": "9000",
+            "itemNumber": "12345682"
+        },
+        {
+            "name": "Kalung 6",
+            "image": "img/kalung/6.png",
+            "originalPrice": "27000",
+            "discountedPrice": "10000",
+            "itemNumber": "12345683"
+        },
+        {
+            "name": "Kalung 7",
+            "image": "img/kalung/7.png",
+            "originalPrice": "30000",
+            "discountedPrice": "12000",
+            "itemNumber": "12345684"
+        },
+        {
+            "name": "Kalung 8",
+            "image": "img/kalung/8.png",
+            "originalPrice": "32000",
+            "discountedPrice": "14000",
+            "itemNumber": "12345685"
+        },
+        {
+            "name": "Kalung 9",
+            "image": "img/kalung/9.png",
+            "originalPrice": "35000",
+            "discountedPrice": "16000",
+            "itemNumber": "12345686"
+        },
+        {
+            "name": "Kalung 10",
+            "image": "img/kalung/10.png",
+            "originalPrice": "37000",
+            "discountedPrice": "18000",
+            "itemNumber": "12345687"
+        }
+    ],
+    "strap": [
+        {
+            "name": "Strap 1",
+            "image": "img/strap/IMG-20241214-WA0016.jpg",
+            "originalPrice": "20000",
+            "discountedPrice": "7000",
+            "itemNumber": "12345680"
+        },
+        {
+            "name": "Strap 2",
+            "image": "img/strap/IMG-20241214-WA0017.jpg",
+            "originalPrice": "22000",
+            "discountedPrice": "8000",
+            "itemNumber": "12345681"
+        },
+        {
+            "name": "Strap 3",
+            "image": "img/strap/IMG-20241214-WA0018.jpg",
+            "originalPrice": "24000",
+            "discountedPrice": "9000",
+            "itemNumber": "12345682"
+        },
+        {
+            "name": "Strap 4",
+            "image": "img/strap/IMG-20241214-WA0019.jpg",
+            "originalPrice": "26000",
+            "discountedPrice": "10000",
+            "itemNumber": "12345683"
+        },
+        {
+            "name": "Strap 5",
+            "image": "img/strap/IMG-20241214-WA0020.jpg",
+            "originalPrice": "28000",
+            "discountedPrice": "11000",
+            "itemNumber": "12345684"
+        },
+        {
+            "name": "Strap 6",
+            "image": "img/strap/IMG-20241214-WA0021.jpg",
+            "originalPrice": "30000",
+            "discountedPrice": "12000",
+            "itemNumber": "12345685"
+        },
+        {
+            "name": "Strap 7",
+            "image": "img/strap/IMG-20241214-WA0022.jpg",
+            "originalPrice": "32000",
+            "discountedPrice": "13000",
+            "itemNumber": "12345686"
+        },
+        {
+            "name": "Strap 8",
+            "image": "img/strap/IMG-20241214-WA0023.jpg",
+            "originalPrice": "34000",
+            "discountedPrice": "14000",
+            "itemNumber": "12345687"
+        },
+        {
+            "name": "Strap 9",
+            "image": "img/strap/IMG-20241214-WA0024.jpg",
+            "originalPrice": "36000",
+            "discountedPrice": "15000",
+            "itemNumber": "12345688"
+        },
+        {
+            "name": "Strap 10",
+            "image": "img/strap/IMG-20241214-WA0025.jpg",
+            "originalPrice": "38000",
+            "discountedPrice": "16000",
+            "itemNumber": "12345689"
+        }
+    ],
+    "cincin": [
+        {
+            "name": "Cincin 1",
+            "image": "img/cincin/IMG-20241214-WA0036.jpg",
+            "originalPrice": "25000",
+            "discountedPrice": "10000",
+            "itemNumber": "12345682"
+        },
+        {
+            "name": "Cincin 2",
+            "image": "img/cincin/IMG-20241214-WA0037.jpg",
+            "originalPrice": "28000",
+            "discountedPrice": "12000",
+            "itemNumber": "12345683"
+        },
+        {
+            "name": "Cincin 3",
+            "image": "img/cincin/IMG-20241214-WA0038.jpg",
+            "originalPrice": "30000",
+            "discountedPrice": "14000",
+            "itemNumber": "12345684"
+        },
+        {
+            "name": "Cincin 4",
+            "image": "img/cincin/IMG-20241214-WA0039.jpg",
+            "originalPrice": "32000",
+            "discountedPrice": "16000",
+            "itemNumber": "12345685"
+        },
+        {
+            "name": "Cincin 5",
+            "image": "img/cincin/IMG-20241214-WA0040.jpg",
+            "originalPrice": "34000",
+            "discountedPrice": "18000",
+            "itemNumber": "12345686"
+        },
+        {
+            "name": "Cincin 6",
+            "image": "img/cincin/IMG-20241214-WA0041.jpg",
+            "originalPrice": "36000",
+            "discountedPrice": "20000",
+            "itemNumber": "12345687"
+        },
+        {
+            "name": "Cincin 7",
+            "image": "img/cincin/IMG-20241214-WA0042.jpg",
+            "originalPrice": "38000",
+            "discountedPrice": "22000",
+            "itemNumber": "12345688"
+        },
+        {
+            "name": "Cincin 8",
+            "image": "img/cincin/IMG-20241214-WA0043.jpg",
+            "originalPrice": "40000",
+            "discountedPrice": "24000",
+            "itemNumber": "12345689"
+        },
+        {
+            "name": "Cincin 9",
+            "image": "img/cincin/IMG-20241214-WA0044.jpg",
+            "originalPrice": "42000",
+            "discountedPrice": "26000",
+            "itemNumber": "12345690"
+        },
+        {
+            "name": "Cincin 10",
+            "image": "img/cincin/IMG-20241214-WA0045.jpg",
+            "originalPrice": "44000",
+            "discountedPrice": "28000",
+            "itemNumber": "12345691"
+        }
+    ],
+    "gelang": [
+        {
+            "name": "Gelang 1",
+            "image": "img/gelang/IMG-20241214-WA0026.jpg",
+            "originalPrice": "30000",
+            "discountedPrice": "15000",
+            "itemNumber": "12345684"
+        },
+        {
+            "name": "Gelang 2",
+            "image": "img/gelang/IMG-20241214-WA0027.jpg",
+            "originalPrice": "32000",
+            "discountedPrice": "17000",
+            "itemNumber": "12345685"
+        },
+        {
+            "name": "Gelang 3",
+            "image": "img/gelang/IMG-20241214-WA0028.jpg",
+            "originalPrice": "34000",
+            "discountedPrice": "19000",
+            "itemNumber": "12345686"
+        },
+        {
+            "name": "Gelang 4",
+            "image": "img/gelang/IMG-20241214-WA0029.jpg",
+            "originalPrice": "36000",
+            "discountedPrice": "21000",
+            "itemNumber": "12345687"
+        },
+        {
+            "name": "Gelang 5",
+            "image": "img/gelang/IMG-20241214-WA0030.jpg",
+            "originalPrice": "38000",
+            "discountedPrice": "23000",
+            "itemNumber": "12345688"
+        },
+        {
+            "name": "Gelang 6",
+            "image": "img/gelang/IMG-20241214-WA0031.jpg",
+            "originalPrice": "40000",
+            "discountedPrice": "25000",
+            "itemNumber": "12345689"
+        },
+        {
+            "name": "Gelang 7",
+            "image": "img/gelang/IMG-20241214-WA0032.jpg",
+            "originalPrice": "42000",
+            "discountedPrice": "27000",
+            "itemNumber": "12345690"
+        },
+        {
+            "name": "Gelang 8",
+            "image": "img/gelang/IMG-20241214-WA0033.jpg",
+            "originalPrice": "44000",
+            "discountedPrice": "29000",
+            "itemNumber": "12345691"
+        },
+        {
+            "name": "Gelang 9",
+            "image": "img/gelang/IMG-20241214-WA0034.jpg",
+            "originalPrice": "46000",
+            "discountedPrice": "31000",
+            "itemNumber": "12345692"
+        },
+        {
+            "name": "Gelang 10",
+            "image": "img/gelang/IMG-20241214-WA0035.jpg",
+            "originalPrice": "48000",
+            "discountedPrice": "33000",
+            "itemNumber": "12345693"
+        }
+    ]
+}

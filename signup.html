@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create an Account</title>
+        <link rel="stylesheet" href="css/style_signup.css">
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="sha512-d5j4t4btFYKkpGz5ptz6anvKUq2ZEl8D3T1zrSp68dxUKaE3VyP+u5ur4Lr4kErTqv6BSVVznECOd2rb9s2nGw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- Firebase -->
+        <script type="module">
+            // Import Firebase
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+            import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
+
+            // Konfigurasi Firebase
+            const firebaseConfig = {
+                apiKey: "AIzaSyBjKkhbuYYJ99jgJNk4-nvsGJ5A19SyGjE",
+                authDomain: "rayfinda.firebaseapp.com",
+                projectId: "rayfinda",
+                storageBucket: "rayfinda.firebasestorage.app",
+                messagingSenderId: "965704722440",
+                appId: "1:965704722440:web:c8ec257d085b1dde4649bd",
+                measurementId: "G-FJV1QHGSBC"
+            };
+
+            // Inisialisasi Firebase
+            const app = initializeApp(firebaseConfig);
+            const auth = getAuth(app);
+
+            // Event Listener untuk Sign Up
+            document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById("signup-form").addEventListener("submit", function(event) {
+                    event.preventDefault(); // Mencegah form reload
+
+                    // Ambil input dari form
+                    const name = document.getElementById("name").value;
+                    const email = document.getElementById("email").value;
+                    const password = document.getElementById("password").value;
+                    const confirmPassword = document.getElementById("confirm-password").value;
+
+                    // Validasi Password
+                    if (password !== confirmPassword) {
+                        alert("Password dan konfirmasi password tidak cocok!");
+                        return;
+                    }
+
+                    // Registrasi dengan Firebase
+                    createUserWithEmailAndPassword(auth, email, password)
+                        .then((userCredential) => {
+                            alert("Akun berhasil dibuat! Silakan login.");
+                            window.location.href = "signin.html"; // Redirect ke halaman login
+                        })
+                        .catch((error) => {
+                            alert("Error: " + error.message);
+                        });
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="signup-container">
+            <div class="welcome-section">
+                <img src="img/login.jpg" alt="Welcome Image">
+            </div>
+
+            <div class="form-section">
+                <h2>Create an account</h2>
+                <form id="signup-form">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> Name</label>
+                        <input type="text" id="name" placeholder="Namanya Masukin" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                        <input type="email" id="email" placeholder="Emailnya Masukin" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password"><i class="fas fa-lock"></i> Password</label>
+                        <input type="password" id="password" placeholder="Password Masukin" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password"><i class="fas fa-lock"></i> Confirm Password</label>
+                        <input type="password" id="confirm-password" placeholder="Password Masukin" required>
+                    </div>
+
+                    <button type="submit" class="btn-signup">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

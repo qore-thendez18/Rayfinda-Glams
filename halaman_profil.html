@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile</title>
+        <link rel="stylesheet" href="css/style_profil.css">
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="sha512-d5j4t4btFYKkpGz5ptz6anvKUq2ZEl8D3T1zrSp68dxUKaE3VyP+u5ur4Lr4kErTqv6BSVVznECOd2rb9s2nGw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+
+    <body>
+        <header class="header">
+            <i class="fas fa-arrow-left back-icon"></i>
+            <h1>Profile</h1>
+        </header>
+
+        <main class="profile-container">
+            <div class="profile-image">
+                <img src="img/cover_login.jpg" alt="Profile Picture">
+                <div class="form-group bio-group">
+                    <label for="bio">Bio</label>
+                    <textarea id="bio" rows="4" placeholder="Masukan Bio"></textarea>
+                </div>
+            </div>
+
+            <form class="profile-form">
+                <div class="form-group">
+                    <label for="name">Nama</label>
+                    <input type="text" id="name" placeholder="Masukan Nama">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Masukan Email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">No.Telepon</label>
+                    <input type="tel" id="phone" placeholder="Masukan Nomer telepon">
+                </div>
+                <div class="form-group">
+                    <label for="gender">Jenis Kelamin</label>
+                    <input type="text" id="gender" placeholder="Masukan jenis kelamin">
+                </div>
+                <div class="form-group">
+                    <label for="birthplace">Tempat Lahir</label>
+                    <input type="text" id="birthplace" placeholder="Masukan tempat">
+                </div>
+                <div class="form-group">
+                    <label for="birthdate">Tanggal Lahir</label>
+                    <input type="date" id="birthdate">
+                </div>
+                <div class="form-group">
+                    <label for="address">Alamat</label>
+                    <input type="text" id="address" placeholder="Masukan Alamat">
+                </div>
+            </form>
+        </main>
+    </body>
+</html>

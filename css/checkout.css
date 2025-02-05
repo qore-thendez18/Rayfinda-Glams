@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f6f6f6;
+    color: #333;
+  }
+  
+  .checkout-container {
+    max-width: 1500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  .header img{
+    width: 150px;
+  }
+  
+  .header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .cancel-btn {
+    background: none;
+    border: none;
+    color: #d9534f;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  main {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  section .book-info,.price-details, .shipping-method{
+    flex: 5;
+    display: flex; 
+    flex-direction: column;
+    gap: 1 rem 2 rem;
+  }
+
+  aside{
+    flex: 1;
+  }
+  
+  .book-info,
+  .price-details,
+  .shipping-method {
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .info-grid div {
+    font-size: 0.9rem;
+  }
+  
+  .info-grid .full-width {
+    grid-column: span 2;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .shipping-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .your-product {
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .product {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .product img,h2,p{
+    margin: 10px;
+  }
+  
+  .product img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .summary {
+    font-size: 0.9rem;
+    margin: 10px 0;
+  }
+  
+  .summary p {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .checkout-btn {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .checkout-btn:hover {
+    background: #218838;
+  }
+  

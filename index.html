@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rayfinda Glems</title>
+
+        <!-- my own css -->
+         <link rel="stylesheet" href="css/style.css">
+
+         <!-- google font -->
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+         <!-- Font Awesome 5.15.4 -->
+            <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+            >
+    </head>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBjKkhbuYYJ99jgJNk4-nvsGJ5A19SyGjE",
+          authDomain: "rayfinda.firebaseapp.com",
+          projectId: "rayfinda",
+          storageBucket: "rayfinda.firebasestorage.app",
+          messagingSenderId: "965704722440",
+          appId: "1:965704722440:web:c8ec257d085b1dde4649bd",
+          measurementId: "G-FJV1QHGSBC"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
+
+    const auth = getAuth();
+
+    // SIGN UP (Registrasi)
+    document.getElementById("signup-form")?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const email = document.getElementById("signup-email").value;
+        const password = document.getElementById("signup-password").value;
+
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                alert("Akun berhasil dibuat!");
+                window.location.href = "signin.html";
+            })
+            .catch((error) => {
+                alert("Error: " + error.message);
+            });
+    });
+
+    // SIGN IN (Login)
+    document.getElementById("signin-form")?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const email = document.getElementById("signin-email").value;
+        const password = document.getElementById("signin-password").value;
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                alert("Login berhasil!");
+                window.location.href = "dashboard.html"; // Ganti dengan halaman setelah login
+            })
+            .catch((error) => {
+                alert("Error: " + error.message);
+            });
+    });
+
+    // SIGN OUT (Logout)
+    document.getElementById("logout-btn")?.addEventListener("click", () => {
+        signOut(auth)
+            .then(() => {
+                alert("Logout berhasil!");
+                window.location.href = "signin.html";
+            })
+            .catch((error) => {
+                alert("Error: " + error.message);
+            });
+    });
+
+    // Cek status login pengguna
+firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+        // Jika pengguna login, tampilkan gambar profil
+        document.getElementById("user-profile").src = user.photoURL || 'default-profile.png'; // Ganti dengan URL gambar profil default jika tidak ada
+        document.getElementById("user-profile").style.display = 'block';
+    } else {
+        // Jika tidak ada pengguna yang login, sembunyikan gambar profil
+        document.getElementById("user-profile").style.display = 'none';
+    }
+});
+
+// Fungsi untuk memeriksa login sebelum menambahkan ke keranjang
+function checkLogin() {
+    const user = firebase.auth().currentUser;
+    if (!user) {
+        alert("Silakan login terlebih dahulu untuk menambahkan item ke keranjang.");
+        window.location.href = "signin.html"; // Arahkan ke halaman login
+    } else {
+        // Logika untuk menambahkan item ke keranjang
+        addToCart();
+    }
+}
+
+      </script>
+    <body>
+        <header class="navbar-container">
+            <div class="logo">
+                <img src="img/rayfinda_logo.png" alt="Dicoding Indonesia"/>
+                <img id="user-profile" src="" alt="User Profile" style="display:none; width: 40px; height: 40px; border-radius: 50%;">
+            </div>
+        
+            <nav class="nav-list">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#catalog">Catalog</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#" id="cart-button" onclick="checkLogin()"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href="signin.html"><i class="fas fa-user"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+        
+
+       <main>
+        <div class="container">
+            <img src="img/cover/Minimal Photography Facebook Cover Template (1280 x 800 piksel) (2).png" alt="Rayfinda" class="gambar">
+        
+        
+        <div id="catalog">
+            <h1>Catalog</h1>
+            <p>Customize your style with our accessories category</p>
+
+            <article>
+                <a href="necklace.html"><img src="img/cover/kalung.jpg" alt="Kalung"></a>
+                <a href="bracelet.html"><img src="img/cover/gelang.jpg" alt="Gelang"></a>
+                <a href="ring.html"><img src="img/cover/cincin.jpg" alt="cincin"></a>
+                <a href="strap.html"><img src="img/cover/strap.jpg" alt="Strap"></a>
+            </article>
+        </div>
+
+        <div class="content">
+            <img class="img" src="img/cover/cover2.jpeg" width="500">
+            <div class="isi">
+            <h5 align="center">Why We're Your Best Choice</h5>
+            <p align="justify">At Rayfinda Glems, we believe that everyone has a unique taste and style, therefore we provide a wide selection of accessories that can be customized to your preferences. </p>
+            </div>
+        </div>
+
+
+        <div class="content2">
+            <h1 class="text">What is this shop's special item?</h1>
+
+            <div class="sub-content2">
+             <button class="text-2xl">
+              <i class="fas fa-chevron-left"></i>
+             </button>
+
+               <img alt="paket1" src="img/paket/paket1.jpg"/>
+               <img alt="paket2" src="img/paket/paket2.jpg"/>
+               <img alt="paket3"  src="img/paket/paket3.jpg"/>
+
+             <button class="text-2xl">
+              <i class="fas fa-chevron-right"></i>
+             </button>
+
+            </div>
+        </div>
+
+        </div>
+       </main>
+
+       <footer>
+            <div class="#about">
+
+             <div class="footer1">
+              <h2 class="contack">Contact Us</h2>
+              <p><i class="fas fa-envelope"></i>   rayfindaglem@gmail.com</p>
+              <p><i class="fas fa-phone"></i>   021-123-345</p>
+              <p><i class="fab fa-instagram"></i>   RayfindaGlems</p>
+             </div>
+
+             <div class="footer2">
+              <h2 class="delivery">Delivery Services</h2>
+                <div class="img-delivery">
+                    <img alt="JNE logo" src="img/footer/jne.png"/>
+                    <img alt="J&T Express logo" src="img/footer/jnt.png"/>
+                    <img alt="Lion Parcel logo" src="img/footer/lionpar.png"/>
+                </div>
+            </div>
+
+             <div class="footer3">
+                <h2 class="payment">Payment Method</h2>
+                <div class="img-payment">
+                    <img alt="BCA logo" src="img/footer/bca.png"/>
+                    <img alt="OVO logo" src="img/footer/ovo.png"/>
+                    <img alt="Gopay logo" src="img/footer/gopay.png"/>
+                </div>
+            </div>
+
+            </div>
+       </footer>
+    </body>
+</html>
