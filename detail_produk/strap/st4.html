@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5ede4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #c4a484;
+            padding: 15px;
+        }
+        .nav-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .brand {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .icons span {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .product {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+        }
+        .product-image img {
+            max-width: 400px;
+            border-radius: 10px;
+        }
+        .product-details {
+            margin-left: 50px;
+        }
+        .price s {
+            color: red;
+        }
+        .discounted {
+            font-size: 24px;
+            font-weight: bold;
+            color: green;
+        }
+        .stock {
+            color: green;
+            font-weight: bold;
+        }
+        .cart-button {
+            background-color: #c4a484;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .delivery {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#">NECKLACE</a>
+            <a href="#">RING</a>
+            <a href="#">BRACELET</a>
+            <a href="#">STRAP</a>
+        </div>
+        <div class="brand">Rayfinda Glems</div>
+        <div class="icons">
+            <a href="#">Home</a>
+            <span class="cart">🛒</span>
+            <span class="user">👤</span>
+        </div>
+    </nav>
+    
+    <section class="product">
+        <div class="product-image">
+            <img src="img/strap/IMG-20241214-WA0019.png" alt="Pearl Starfish">
+        </div>
+        <div class="product-details">
+            <h1>Black Butterfly</h1>
+            <p class="price"><s>Rp. 2.000</s> <span class="discounted">Rp. 2.000</span></p>
+            <p class="stock">⭐ Ready stock!</p>
+            <p><strong>Fitur:</strong> Strap dengan design warga gelap nan elegan</p>
+            <button class="cart-button">Add to cart</button>
+            <p class="delivery">🚚 Free delivery on order over Rp. 300.000</p>
+            <p><strong>Brand:</strong> Baru buka</p>
+            <p><strong>Collection:</strong> Pribadi</p>
+            <p><strong>Item no.:</strong> ST-004</p>
+            <p><strong>Material:</strong> Material</p>
+        </div>
+    </section>
+</body>
+</html>

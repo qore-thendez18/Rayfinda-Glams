@@ -11,58 +11,44 @@ body {
     background-color: #f9f9f9;
 }
 
-header {
-    display: inline;
-}
-
-header {
-    display: inline;
-}
-
-header {
-    display: inline;
-    padding-top: 20px; /* Menambahkan padding di atas header */
-}
-
+/* Navbar */
 .navbar-container {
     width: 100%;
-    padding-block: 15px; /* Atur sesuai kebutuhan */
-    margin-inline: auto;
-    margin-bottom: 30px; /* Meningkatkan jarak di bawah navbar */
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    top: 0;
+    left: 0;
     background-color: #B99982;
     z-index: 9999;
 }
 
-
-
 .navbar-container .logo img {
-    width: 150px;
-    margin-left: 30px;
+    width: 120px;
+    margin-left: 20px;
 }
 
 .navbar-container .nav-list ul {
-    padding-left: 0;
     display: flex;
     justify-content: center;
-    margin-right: 30px;
+    margin-right: 20px;
+    list-style: none;
 }
 
-header.navbar-container .nav-list li {
-    list-style-type: none;
+.navbar-container .nav-list li {
+    margin: 0 10px;
 }
 
 .navbar-container .nav-list li a {
-    padding: 0.5rem 1rem;
+    padding: 8px 16px;
     border-radius: 999px;
     text-decoration: none;
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 500;
     color: black;
-    transition: all 0.2s ease-in-out;
+    transition: 0.3s;
 }
 
 .navbar-container .nav-list li:hover a {
@@ -72,12 +58,12 @@ header.navbar-container .nav-list li {
 
 /* Main */
 main {
-    padding: 20px;
+    padding: 80px 20px 20px; /* Padding atas agar konten tidak tertutup navbar */
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
@@ -120,4 +106,34 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #d8cfc4;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navbar-container .logo img {
+        margin-left: 0;
+    }
+
+    .navbar-container .nav-list ul {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .navbar-container .nav-list li {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
 }

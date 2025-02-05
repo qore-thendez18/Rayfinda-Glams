@@ -18,7 +18,7 @@ header {
 
 .navbar-container {
     width: 100%;
-    padding-block: 2px;
+    padding: 10px 20px;
     margin-inline: auto;
     display: flex;
     justify-content: space-between;
@@ -26,21 +26,21 @@ header {
     position: fixed;
     background-color: #B99982;
     z-index: 9999;
+    flex-wrap: wrap;
 }
 
 .navbar-container .logo img {
-    width: 150px;
-    margin-left: 30px;
+    width: 120px;
 }
 
 .navbar-container .nav-list ul {
     padding-left: 0;
     display: flex;
     justify-content: center;
-    margin-right: 30px;
+    flex-wrap: wrap;
 }
 
-header.navbar-container .nav-list li {
+.navbar-container .nav-list li {
     list-style-type: none;
 }
 
@@ -62,158 +62,115 @@ header.navbar-container .nav-list li {
 main {
     width: 100%;
     flex-grow: 1;
-    margin: 0 auto; /* Agar tetap di tengah jika ada max-width */
-}
-
-main .container {
-    justify-content: center; /* Center horizontally */
-    align-items: center;
+    margin: 0 auto;
+    text-align: center;
 }
 
 main .gambar {
-    margin-top: 100px;
-    margin-left: auto; /* Menambahkan margin otomatis di kiri */
-    margin-right: auto; /* Menambahkan margin otomatis di kanan */
-    border-radius: 25px;
-    width: 1200px;
+    max-width: 100%;
+    width: 90%;
     height: auto;
-    display: block; /* Pastikan gambar adalah elemen block-level */
-    text-align: center;
+    border-radius: 25px;
+    display: block;
+    margin: 100px auto 0;
 }
 
 main #catalog {
     font-size: 20px;
     margin-top: 50px;
     width: 100%;
-    text-align: center;
-}
-
-main #catalog h1 {
-    text-align: center;
-}
-
-main #catalog p {
-    text-align: center;
-    margin: auto;
 }
 
 main article {
-    display: flex; /* Mengatur section menjadi baris horizontal */
-    justify-content: space-evenly; /* Mengatur jarak antar section */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     margin-top: 50px;
 }
 
 main article img {
-    width: 250px;
-    margin: 40px;
-    height: 400px;
+    width: 80%;
+    max-width: 300px;
+    height: auto;
     border-radius: 25px;
+    margin: 20px;
 }
 
 main .content {
     display: flex;
-    justify-content: space-between;
-    padding: 70px;
-    width: 100%;
-    margin: 65px auto 0 auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
 main .content .img {
-    width: 500px;
-    height: auto;
+    width: 80%;
+    max-width: 400px;
     border-radius: 20px;
-    margin: 50px;
+    margin-bottom: 20px;
 }
 
 main .content .isi {
-    padding: 50px;
+    padding: 20px;
     font-size: 20px;
-}
-
-main .content2 {
-    width: 100%;
-    text-align: center;
-}
-
-main .text {
-    text-align: center;
 }
 
 main .sub-content2 {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     margin: 30px;
 }
 
 main .sub-content2 img {
-    width: 250px;
-    margin: 15px;
+    width: 80%;
+    max-width: 300px;
     border-radius: 20px;
+    margin: 15px;
 }
 
 footer {
-    background-color: #d9b6a3; /* Warna cokelat latar belakang */
+    background-color: #d9b6a3;
     padding: 20px 40px;
-    color: #000; /* Warna teks */
-  }
-  
-  footer h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    text-transform: uppercase; /* Teks huruf kapital */
-  }
-  
-  footer p {
-    margin: 5px 0;
-    font-size: 14px;
-  }
-  
-  footer .footer1,
-  footer .footer2,
-  footer .footer3 {
-    display: inline-block;
-    vertical-align: top;
-    width: 30%; /* Lebar setiap kolom */
-  }
-  
-  footer .footer1 {
-    text-align: left;
-    margin-left: 50px;
-  }
-  
-  footer .footer2,
-  footer .footer3 {
+    color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     text-align: center;
-  }
-  
-  footer img {
+}
+
+footer .footer1, footer .footer2, footer .footer3 {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+footer img {
     width: auto;
     height: 30px;
-    margin-right: 8px;
-  }
-  
-  footer .img-delivery img,
-  footer .img-payment img {
-    display: inline-block; /* Supaya gambar sejajar */
-    margin-right: 12px; /* Spasi antar gambar */
-  }
-  
-  footer .img-payment img:last-child,
-  footer .img-delivery img:last-child {
-    margin-right: 0; /* Menghilangkan margin pada gambar terakhir */
-  }
-  
-  @media screen and (max-width: 768px) {
-    footer .footer1,
-    footer .footer2,
-    footer .footer3 {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
     }
-  
-    footer img {
-      margin-right: 10px; /* Menambah jarak antar gambar */
+
+    .navbar-container .nav-list ul {
+        flex-direction: column;
+        align-items: center;
     }
-  }
-  
+
+    main article {
+        flex-direction: column;
+    }
+
+    main .content {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
